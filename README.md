@@ -5,19 +5,30 @@ DSL for Gem SparseMatrix and we use gem Gemnasium for check dependency of our ge
 ## Tree
 
     .
+    ├── config
+    │   └── gemnasium.yml
     ├── Gemfile
     ├── Gemfile.lock
-    ├── Guardfile
-    ├── LICENSE.txt
-    ├── README.md
-    ├── Rakefile
     ├── lib
-    │   ├── dsl_matrix.rb
-    └── spec
-        └── dsl_matrix_spec.rb
+    │   ├── dsl.rb
+    │   ├── multiplicacion.rb
+    │   ├── sparse_matrix.rb
+    │   ├── suma.rb
+    │   └── tasks
+    │       └── gemnasium.rake
+    ├── LICENSE
+    ├── Rakefile
+    └── README.md
+
 
 ##How to Use
-as soon as
+
+    rake #Run default task Suma and Multiplicacion
+
+    rake suma #Run Suma's task
+
+    rake multiplicacion #Run Multiplicacion's task
+
 ## Authors 
     Kevin Robayna 
     Jose Antonio Rodriguez Leandro
