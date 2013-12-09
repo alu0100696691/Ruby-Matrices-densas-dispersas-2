@@ -7,7 +7,7 @@ calc = <<"CALC"
 require './lib/sparse_matrix'
 
 MatrixDsl.new() do
-    #{calc}
+	#{calc}
 end
 CALC
 matrixdsl = eval calc
