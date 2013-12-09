@@ -1,4 +1,4 @@
-## DSL-Matrix
+## DSL-Matrix[![Dependency Status](https://gemnasium.com/kevinrobayna-ull/DSL-Matrix.png)](https://gemnasium.com/kevinrobayna-ull/DSL-Matrix)
 DSL for Gem SparseMatrix and we use gem Gemnasium for check dependency of our gem
 ##RubyGems
     https://rubygems.org/gems/sparse_matrix
