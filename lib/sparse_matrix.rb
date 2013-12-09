@@ -86,19 +86,19 @@ class SparseMatrix < AbstractMatrix #matrix dispersa
     end
     
     def to_s #devuelve una cadena string
-        cadena=""
-        for i in 0...@n
-            cadena+="["
-            for j in 0...@m
-                cadena+=self.valor(i,j).to_s
-                if j < @m-1
-                    cadena+=", "
+        cadena="| "
+        for i in 0...@MAT.size
+            for j in 0...@MAT.size
+                if j==0 
+                    cadena+="{ "
+                end
+                cadena+="\t#{self.valor(i,j).to_s}\t"
+                if j == @MAT.size-1 || self.valor(i,j).to_s == "0"
+                    cadena+=" } , "
                 end
             end
-            cadena+="]"
         end
-        return cadena
-        
+        cadena+="|"        
     end
     
     def valor(k,j)  #para buscar un valor especifico
@@ -195,7 +195,7 @@ class DenseMatrix < AbstractMatrix  #clase para matrices densas
                 if j==0
                     s += "{ "
                 end
-                s += "#{@mat[i][j]}\t"
+                s += "\t#{@mat[i][j]}\t"
                 if j == @mat.length-1
                     s += " } , "
                 end
