@@ -453,7 +453,6 @@ class MatrixDsl
 
        #REPRESENTAR POR PANTALLA LAS OPERACIONES
        def result(res)
-           system("clear")
            case @name
            when "suma"
                printf "\t\tSUMA DE MATRICES \n"
