@@ -389,3 +389,84 @@ end
         u
     end
 end
+
+#DSL INTERNO PARA OPERAR CON MATRICES
+class MatrixDsl
+    
+       def initialize(operation = "", &block)
+           @name= operation
+           @represent = 0 
+           @typeMatrix = ""
+           @DM = []
+           instance_eval &block
+       end
+       
+       #SE ESPECIFICA QUE OPERACION REALIZAR CON LAS MATRICES
+       def operation(opt)
+           @name = opt
+       end
+       
+       #OPCIONES PARA CREAR Y MOSTRAR LAS MATRICES
+       def option(opt)
+           case opt
+           when "dense"  
+               @typeMatrix = "dense"
+           when "sparse" 
+               @typeMatrix = "sparse"
+           when "console"
+               @represent = 1
+           when "matrix"
+               @represent = 0
+           end
+                              
+       end
+       
+       #MATRIZ DE OBJETOS PARA GUARDAR LOS OPERANDOS MATRIZ
+       def operand(fil1,fil2)
+           n = fil1.size
+           m = fil2.size
+                     
+           case @typeMatrix
+           when "dense" 
+            @DM << SparseMatrix::DenseMatrix.new(n,m,[fil1,fil2])
+           when "sparse" 
+            @DM << SparseMatrix::SparseMatrix.new(n,m,[fil1,fil2])
+           end 
+       
+       end
+       
+       #METODO PRINCIPAL PARA REALIZAR LAS OPERACIONES CON LAS MATRICES
+       def run
+           case @name
+           when "suma"
+               resultado = (@DM[0]+@DM[1]).to_s
+           when "multiplicar"
+               resultado = (@DM[0]*@DM[1]).to_s
+           end
+
+           if @represent == 1
+               result(resultado)
+           else
+               return resultado
+           end                  
+       end
+
+       #REPRESENTAR POR PANTALLA LAS OPERACIONES
+       def result(res)
+           system("clear")
+           case @name
+           when "suma"
+               printf "\t\tSUMA DE MATRICES \n"
+               printf "\t\t----------------\n\n"
+               printf " OPERANDO A:\t%s\n ", @DM[0].to_s
+               printf "OPERANDO B:\t%s\n\n ", @DM[1].to_s
+               printf "RESULTADO:\t%s\n\n\n", res
+           when "multiplicar"                                  
+               printf "\t\tMULTIPLICACION DE MATRICES \n"
+               printf "\t\t--------------------------\n\n"
+               printf " OPERANDO A:\t%s\n ", @DM[0].to_s
+               printf "OPERANDO B:\t%s\n\n ", @DM[1].to_s
+               printf "RESULTADO:\t%s\n\n\n", res
+           end
+       end
+end
