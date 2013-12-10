@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class MatrixDsl - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/sparse_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-operand">#operand</a>
+    
+    <li ><a href="#method-i-operation">#operation</a>
+    
+    <li ><a href="#method-i-option">#option</a>
+    
+    <li ><a href="#method-i-result">#result</a>
+    
+    <li ><a href="#method-i-run">#run</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/sparse_matrix_rb~.html">sparse_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/tasks/gemnasium_rake.html">gemnasium.rake</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./MatrixDsl.html">MatrixDsl</a>
+  
+    <li><a href="./SparseMatrix.html">SparseMatrix</a>
+  
+    <li><a href="./SparseMatrix/AbstractMatrix.html">SparseMatrix::AbstractMatrix</a>
+  
+    <li><a href="./SparseMatrix/DenseMatrix.html">SparseMatrix::DenseMatrix</a>
+  
+    <li><a href="./SparseMatrix/Fraction.html">SparseMatrix::Fraction</a>
+  
+    <li><a href="./SparseMatrix/SparseMatrix.html">SparseMatrix::SparseMatrix</a>
+  
+    <li><a href="./SparseMatrix/SparseVector.html">SparseMatrix::SparseVector</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MatrixDsl</h1>
+
+  <div id="description" class="description">
+    
+<p>DSL INTERNO PARA OPERAR CON MATRICES</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(operation = "", &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Initialize, inicializa los valores a los que se les pase por parametro</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 431</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">operation</span> = <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+         <span class="ruby-ivar">@name</span>= <span class="ruby-identifier">operation</span>
+         <span class="ruby-ivar">@represent</span> = <span class="ruby-value">0</span> 
+         <span class="ruby-ivar">@typeMatrix</span> = <span class="ruby-string">&quot;&quot;</span>
+         <span class="ruby-ivar">@DM</span> = []
+         <span class="ruby-identifier">instance_eval</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-operand" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">operand</span><span
+            class="method-args">(fil1,fil2)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>MATRIZ DE OBJETOS PARA GUARDAR LOS OPERANDOS MATRIZ</p>
+          
+          
+
+          
+          <div class="method-source-code" id="operand-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 459</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">operand</span>(<span class="ruby-identifier">fil1</span>,<span class="ruby-identifier">fil2</span>)
+         <span class="ruby-identifier">n</span> = <span class="ruby-identifier">fil1</span>.<span class="ruby-identifier">size</span>
+         <span class="ruby-identifier">m</span> = <span class="ruby-identifier">fil2</span>.<span class="ruby-identifier">size</span>
+         <span class="ruby-keyword">case</span> <span class="ruby-ivar">@typeMatrix</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;dense&quot;</span> 
+                 <span class="ruby-ivar">@DM</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">SparseMatrix</span><span class="ruby-operator">::</span><span class="ruby-constant">DenseMatrix</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">n</span>,<span class="ruby-identifier">m</span>,[<span class="ruby-identifier">fil1</span>,<span class="ruby-identifier">fil2</span>])
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;sparse&quot;</span> 
+                 <span class="ruby-ivar">@DM</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">SparseMatrix</span><span class="ruby-operator">::</span><span class="ruby-constant">SparseMatrix</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">n</span>,<span class="ruby-identifier">m</span>,[<span class="ruby-identifier">fil1</span>,<span class="ruby-identifier">fil2</span>])
+         <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- operand-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- operand-method -->
+
+    
+      <div id="method-i-operation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">operation</span><span
+            class="method-args">(opt)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>SE ESPECIFICA QUE OPERACION REALIZAR CON LAS MATRICES</p>
+          
+          
+
+          
+          <div class="method-source-code" id="operation-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">operation</span>(<span class="ruby-identifier">opt</span>)
+         <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">opt</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- operation-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- operation-method -->
+
+    
+      <div id="method-i-option" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">option</span><span
+            class="method-args">(opt)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>OPCIONES PARA CREAR Y MOSTRAR LAS MATRICES</p>
+          
+          
+
+          
+          <div class="method-source-code" id="option-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 445</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">option</span>(<span class="ruby-identifier">opt</span>)
+         <span class="ruby-keyword">case</span> <span class="ruby-identifier">opt</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;dense&quot;</span>  
+                 <span class="ruby-ivar">@typeMatrix</span> = <span class="ruby-string">&quot;dense&quot;</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;sparse&quot;</span> 
+                 <span class="ruby-ivar">@typeMatrix</span> = <span class="ruby-string">&quot;sparse&quot;</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;console&quot;</span>
+                 <span class="ruby-ivar">@represent</span> = <span class="ruby-value">1</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;matrix&quot;</span>
+                 <span class="ruby-ivar">@represent</span> = <span class="ruby-value">0</span>
+         <span class="ruby-keyword">end</span>               
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- option-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- option-method -->
+
+    
+      <div id="method-i-result" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">result</span><span
+            class="method-args">(res)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>REPRESENTAR POR PANTALLA LAS OPERACIONES</p>
+          
+          
+
+          
+          <div class="method-source-code" id="result-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 487</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">result</span>(<span class="ruby-identifier">res</span>)
+         <span class="ruby-keyword">case</span> <span class="ruby-ivar">@name</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;suma&quot;</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;\t\tSUMA DE MATRICES \n&quot;</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;\t\t----------------\n\n&quot;</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot; OPERANDO A:\t%s\n &quot;</span>, <span class="ruby-ivar">@DM</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;OPERANDO B:\t%s\n\n &quot;</span>, <span class="ruby-ivar">@DM</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_s</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;RESULTADO:\t%s\n\n\n&quot;</span>, <span class="ruby-identifier">res</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;multiplicar&quot;</span>                                  
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;\t\tMULTIPLICACION DE MATRICES \n&quot;</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;\t\t--------------------------\n\n&quot;</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot; OPERANDO A:\t%s\n &quot;</span>, <span class="ruby-ivar">@DM</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;OPERANDO B:\t%s\n\n &quot;</span>, <span class="ruby-ivar">@DM</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_s</span>
+                 <span class="ruby-identifier">printf</span> <span class="ruby-string">&quot;RESULTADO:\t%s\n\n\n&quot;</span>, <span class="ruby-identifier">res</span>
+         <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- result-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- result-method -->
+
+    
+      <div id="method-i-run" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">run</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>METODO PRINCIPAL PARA REALIZAR LAS OPERACIONES CON LAS MATRICES</p>
+          
+          
+
+          
+          <div class="method-source-code" id="run-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 471</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
+         <span class="ruby-keyword">case</span> <span class="ruby-ivar">@name</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;suma&quot;</span>
+                 <span class="ruby-identifier">resultado</span> = (<span class="ruby-ivar">@DM</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">+</span><span class="ruby-ivar">@DM</span>[<span class="ruby-value">1</span>]).<span class="ruby-identifier">to_s</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;multiplicar&quot;</span>
+                 <span class="ruby-identifier">resultado</span> = (<span class="ruby-ivar">@DM</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">*</span><span class="ruby-ivar">@DM</span>[<span class="ruby-value">1</span>]).<span class="ruby-identifier">to_s</span>
+         <span class="ruby-keyword">end</span>
+
+         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@represent</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+                 <span class="ruby-identifier">result</span>(<span class="ruby-identifier">resultado</span>)
+         <span class="ruby-keyword">else</span>
+                 <span class="ruby-keyword">return</span> <span class="ruby-identifier">resultado</span>
+         <span class="ruby-keyword">end</span>                  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- run-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- run-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

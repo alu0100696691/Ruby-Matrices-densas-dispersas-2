@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class SparseMatrix::Fraction - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/sparse_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-2D-40">#-@</a>
+    
+    <li ><a href="#method-i-2F">#/</a>
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-3D-3D">#==</a>
+    
+    <li ><a href="#method-i-abs">#abs</a>
+    
+    <li ><a href="#method-i-coerce">#coerce</a>
+    
+    <li ><a href="#method-i-minimiza">#minimiza</a>
+    
+    <li ><a href="#method-i-reciprocal">#reciprocal</a>
+    
+    <li ><a href="#method-i-to_f">#to_f</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../lib/sparse_matrix_rb~.html">sparse_matrix.rb~</a>
+  
+    <li class="file"><a href="../lib/tasks/gemnasium_rake.html">gemnasium.rake</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../MatrixDsl.html">MatrixDsl</a>
+  
+    <li><a href="../SparseMatrix.html">SparseMatrix</a>
+  
+    <li><a href="../SparseMatrix/AbstractMatrix.html">SparseMatrix::AbstractMatrix</a>
+  
+    <li><a href="../SparseMatrix/DenseMatrix.html">SparseMatrix::DenseMatrix</a>
+  
+    <li><a href="../SparseMatrix/Fraction.html">SparseMatrix::Fraction</a>
+  
+    <li><a href="../SparseMatrix/SparseMatrix.html">SparseMatrix::SparseMatrix</a>
+  
+    <li><a href="../SparseMatrix/SparseVector.html">SparseMatrix::SparseVector</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class SparseMatrix::Fraction</h1>
+
+  <div id="description" class="description">
+    
+<p>clase para operaciones de numeros fraccionales</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-den_" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">den_</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>getter y setter</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-num_" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">num_</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>getter y setter</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(*args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Initialize, inicializa los valores a los que se les pase por parametro</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 289</span>
+<span class="ruby-keyword">def</span>  <span class="ruby-identifier">initialize</span> (<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+                <span class="ruby-identifier">c</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>])
+                <span class="ruby-ivar">@num_</span> = (<span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">/</span><span class="ruby-identifier">c</span>)
+                <span class="ruby-ivar">@den_</span> = (<span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">/</span><span class="ruby-identifier">c</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-ivar">@num_</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]
+                <span class="ruby-ivar">@den_</span> = <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>multiplicacion de numeros fraccionarios</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">b</span>)
+        <span class="ruby-identifier">r</span> =<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Fraction</span>
+                <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>=<span class="ruby-ivar">@num_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span>
+                <span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span>=<span class="ruby-ivar">@den_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>
+                <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-identifier">minimiza</span>(<span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span>)
+                <span class="ruby-identifier">r</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">r</span>=<span class="ruby-keyword">self</span><span class="ruby-operator">*</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">b</span>,<span class="ruby-value">1</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>suma de numeros fraccionarios</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 338</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">b</span>)
+        <span class="ruby-identifier">r</span>=<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Fraction</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@den_</span><span class="ruby-operator">==</span><span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>)
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span> = <span class="ruby-ivar">@num_</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span>
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-ivar">@den_</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span> = <span class="ruby-ivar">@num_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@den_</span>
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-ivar">@den_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">r</span>=<span class="ruby-keyword">self</span><span class="ruby-operator">+</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">b</span>,<span class="ruby-value">1</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-identifier">minimiza</span>(<span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span>)
+        <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>resta de numeros fraccionarios</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 356</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">b</span>) 
+        <span class="ruby-identifier">r</span> =<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Fraction</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@den_</span><span class="ruby-operator">==</span><span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>)
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span> = <span class="ruby-ivar">@num_</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span>
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-ivar">@den_</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span> = <span class="ruby-ivar">@num_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@den_</span>
+                        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-ivar">@den_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">r</span>=<span class="ruby-keyword">self</span><span class="ruby-operator">-</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">b</span>,<span class="ruby-value">1</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-identifier">minimiza</span>(<span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span>)
+        <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2D-40" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-@</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>opuesto</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-40-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-@</span> 
+        <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@num_</span>,<span class="ruby-ivar">@den_</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-40-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-40-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>division de numeros fraccionarios</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-identifier">b</span>)
+        <span class="ruby-identifier">r</span> =<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Fraction</span>
+                <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>=<span class="ruby-ivar">@num_</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span>
+                <span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span>=<span class="ruby-ivar">@den_</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>
+                <span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-identifier">minimiza</span>(<span class="ruby-identifier">r</span>.<span class="ruby-identifier">num_</span>,<span class="ruby-identifier">r</span>.<span class="ruby-identifier">den_</span>)
+                <span class="ruby-identifier">r</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">r</span>=<span class="ruby-keyword">self</span><span class="ruby-operator">/</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">b</span>,<span class="ruby-value">1</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>comparar</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">b</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">==</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>comparar</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">b</span>) 
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@num_</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">b</span>.<span class="ruby-identifier">num_</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@den_</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">b</span>.<span class="ruby-identifier">den_</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3D-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3D-3D-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>valor absoluto</p>
+          
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>
+        <span class="ruby-identifier">c</span> = <span class="ruby-ivar">@num_</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@den_</span>.<span class="ruby-identifier">to_f</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">abs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- abs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(b)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retorna la misma fraccion y el numero que le pasamos por parametro lo pasa
+a fraccion</p>
+          
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 413</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">b</span>)
+        [<span class="ruby-keyword">self</span>,<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">b</span>,<span class="ruby-value">1</span>)]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-minimiza" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">minimiza</span><span
+            class="method-args">(x,y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>minimizar fraccion</p>
+          
+          
+
+          
+          <div class="method-source-code" id="minimiza-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">minimiza</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-identifier">d</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-identifier">x</span> = <span class="ruby-identifier">x</span><span class="ruby-operator">/</span><span class="ruby-identifier">d</span>
+        <span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span><span class="ruby-operator">/</span><span class="ruby-identifier">d</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- minimiza-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- minimiza-method -->
+
+    
+      <div id="method-i-reciprocal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reciprocal</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>devuelve fraccion dada la vuelta</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reciprocal-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 325</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reciprocal</span>
+        <span class="ruby-identifier">f</span>=<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">f</span>.<span class="ruby-identifier">num_</span>=<span class="ruby-ivar">@den_</span>
+        <span class="ruby-identifier">f</span>.<span class="ruby-identifier">den_</span> = <span class="ruby-ivar">@num_</span>
+        <span class="ruby-identifier">f</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- reciprocal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- reciprocal-method -->
+
+    
+      <div id="method-i-to_f" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_f</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>devuelve float</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_f-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_f</span> 
+        <span class="ruby-ivar">@num_</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@den_</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_f-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_f-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>devuelve string</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span> 
+        <span class="ruby-node">&quot;#{@num_}/#{@den_}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

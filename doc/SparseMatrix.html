@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>module SparseMatrix - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/sparse_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-gcd">#gcd</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/sparse_matrix_rb~.html">sparse_matrix.rb~</a>
+  
+    <li class="file"><a href="./lib/tasks/gemnasium_rake.html">gemnasium.rake</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./MatrixDsl.html">MatrixDsl</a>
+  
+    <li><a href="./SparseMatrix.html">SparseMatrix</a>
+  
+    <li><a href="./SparseMatrix/AbstractMatrix.html">SparseMatrix::AbstractMatrix</a>
+  
+    <li><a href="./SparseMatrix/DenseMatrix.html">SparseMatrix::DenseMatrix</a>
+  
+    <li><a href="./SparseMatrix/Fraction.html">SparseMatrix::Fraction</a>
+  
+    <li><a href="./SparseMatrix/SparseMatrix.html">SparseMatrix::SparseMatrix</a>
+  
+    <li><a href="./SparseMatrix/SparseVector.html">SparseMatrix::SparseVector</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module SparseMatrix</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Modulo+que+contiene+la+gema+para+el+trabajo+con+matrices.">Modulo que contiene la gema para el trabajo con matrices.<span><a href="#label-Modulo+que+contiene+la+gema+para+el+trabajo+con+matrices.">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<pre class="ruby"><span class="ruby-constant">Para</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">realizacion</span> <span class="ruby-identifier">de</span> <span class="ruby-identifier">esta</span> <span class="ruby-identifier">practica</span> <span class="ruby-identifier">se</span> <span class="ruby-identifier">ha</span> <span class="ruby-identifier">creado</span> <span class="ruby-identifier">una</span> <span class="ruby-identifier">jeraquia</span> <span class="ruby-identifier">de</span> <span class="ruby-identifier">clases</span>. <span class="ruby-constant">Todo</span> <span class="ruby-identifier">esta</span> <span class="ruby-identifier">integrado</span> <span class="ruby-identifier">en</span> <span class="ruby-identifier">un</span> <span class="ruby-keyword">module</span> <span class="ruby-identifier">llamado</span> <span class="ruby-constant">SparseMatrix</span>,
+<span class="ruby-identifier">el</span> <span class="ruby-identifier">cual</span> <span class="ruby-identifier">contiene</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">clase</span> <span class="ruby-identifier">madre</span> <span class="ruby-identifier">abstracta</span> <span class="ruby-constant">AbstractMatrix</span> <span class="ruby-identifier">con</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">que</span> <span class="ruby-identifier">creamos</span> <span class="ruby-identifier">las</span> <span class="ruby-identifier">clases</span> <span class="ruby-constant">SparseMatrix</span> <span class="ruby-identifier">y</span> <span class="ruby-constant">DenseMatrix</span>. 
+<span class="ruby-constant">Para</span> <span class="ruby-identifier">almacenar</span> <span class="ruby-identifier">los</span> <span class="ruby-identifier">datos</span> <span class="ruby-identifier">de</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">matriz</span> <span class="ruby-identifier">dispersa</span> <span class="ruby-identifier">usamos</span> <span class="ruby-identifier">un</span> <span class="ruby-identifier">vector</span> <span class="ruby-identifier">de</span> <span class="ruby-identifier">duplas</span> <span class="ruby-identifier">usando</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">clase</span> <span class="ruby-constant">SparseVector</span>.
+<span class="ruby-constant">Los</span> <span class="ruby-identifier">metodos</span> <span class="ruby-identifier">implementados</span> <span class="ruby-identifier">usando</span> <span class="ruby-identifier">metodologia</span> <span class="ruby-identifier">funcional</span> <span class="ruby-identifier">son</span><span class="ruby-operator">:</span>
+
+<span class="ruby-operator">*</span> <span class="ruby-identifier">suma</span>
+<span class="ruby-operator">*</span> <span class="ruby-identifier">multiplicacion</span>
+</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-gcd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gcd</span><span
+            class="method-args">(u, v)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>maximo comun divisor</p>
+          
+          
+
+          
+          <div class="method-source-code" id="gcd-source">
+            <pre><span class="ruby-comment"># File lib/sparse_matrix.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span>)
+        <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">u</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">v</span>.<span class="ruby-identifier">abs</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">v</span>, <span class="ruby-identifier">u</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">v</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">u</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- gcd-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gcd-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

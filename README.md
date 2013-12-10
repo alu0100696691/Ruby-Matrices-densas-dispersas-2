@@ -27,9 +27,9 @@ DSL for Gem SparseMatrix and we use gem Gemnasium for check dependency of our ge
 
 	rake #Run default task Suma and Multiplicacion
 
-    	rake suma #Run Suma's task
+    rake suma #Run Suma's task
 
-    	rake multiplicacion #Run Multiplicacion's task
+    rake multiplicacion #Run Multiplicacion's task
 
 ## Authors 
     	Kevin Robayna 
